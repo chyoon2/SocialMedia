@@ -6,12 +6,18 @@ class TweetControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {  
-      makeCreateTweetFormVisible: false
+      makeCreateTweetFormVisible: false,
+      counter: 0
     }
   }
 
   handleClick = () => {
-    this.setState(prevsState => ({makeCreateTweetFormVisible: !prevsState.makeCreateTweetFormVisible}));
+    this.setState(prevsState => (
+      {
+        makeCreateTweetFormVisible: !prevsState.makeCreateTweetFormVisible, 
+        counter: prevsState.counter + 1
+      }
+    ));
   }
 
   render() { 
@@ -29,6 +35,7 @@ class TweetControl extends React.Component {
         <button onClick= {this.handleClick}>{buttonText}</button>
         <hr />
         <ListOfTweets />
+        <h1>{this.state.counter}</h1>
     </React.Fragment>
     );
   }
