@@ -1,13 +1,16 @@
 import React from "react";
 import ProfileInfo from "./ProfileInfo";
 import AboutMe from "./AboutMe";
-import ListOfTweet from "./ListOfTweets";
+import TweetControl from "./TweetControl";
 
 function App() {
   return <React.Fragment>
     <ProfileInfo />
+    <hr />
     <AboutMe />
-    <ListOfTweet />
+    <hr />
+    <hr />
+    <TweetControl />
   </React.Fragment>;
 }
 

@@ -15,7 +15,6 @@ const tweetsList = [
 function ListOfTweets() {
   return (
     <React.Fragment>
-      <hr />
       {tweetsList.map((tweet, index) => (
         <Tweet 
         title={tweet.name}
